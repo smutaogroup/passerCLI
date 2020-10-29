@@ -1,0 +1,7 @@
+
+dgl==0.4.3
+numpy
+requests==2.24.0
+scikit-learn==0.23.2
+torch==1.6.0
+xgboost==1.2.0
