@@ -28,12 +28,13 @@ python setup.py install init
 
 ## Usage
 
-1. Users can either specify a PDB ID or the direction of a local PDB file. 
+1. The user can either specify a PDB ID or the direction of a local PDB file. 
 2. Chain ID is optional. If no chain ID is given, all chains in the PDB file will be analyzed. 
-3. Top 3 pockets with corresponding probabilities and pocket residues are displayed on screen. 
+3. The user can choose to save FPocket results. By default, all generated files will be deleted when calculation is finished. 
+4. Top 3 pockets with corresponding probabilities and pocket residues are displayed on screen. 
 
 ```
-usage: passer [-h] [-i ID] [-f FILE] [-c CHAIN]
+usage: passer [-h] [-i ID] [-f FILE] [-c CHAIN] [-s SAVE]
 
 PASSer CLI
 
@@ -43,6 +44,7 @@ optional arguments:
   -f FILE, --file FILE  PDB file
   -c CHAIN, --chain CHAIN
                         chain ID
+  -s SAVE, --save SAVE  save FPocket results (y/n)
 ```
 
 **Example**:
@@ -59,11 +61,11 @@ Output:
 
 ```
 Pocket 1: 89.6%
-ASN262 VAL253 GLU308 GLN291 THR255 ARG288 ILE303 LEU290 CYS287 ASN286 ILE333 GLY348 ASN319 ILE307 PHE346 ARG304 LEU317 PHE331 GLN350 VAL300 ASP261 ASN329
+A:GLU308 A:CYS287 A:GLY348 A:PHE346 A:ASN286 A:ILE333 A:ILE303 A:PHE331 A:VAL300 A:ILE307 A:VAL253 A:ASN262 A:THR255 A:ASN319 A:GLN350 A:ASP261 A:ARG304 A:ARG288 A:LEU317 A:GLN291 A:ASN329 A:LEU290
 Pocket 2: 20.2%
-ASN251 GLN246 GLN250 GLY270 LYS352 SER268 ARG321 LEU274 GLN269 ASN273 TYR266 GLN249
+A:GLN246 A:GLN250 A:LYS352 A:LEU274 A:ASN251 A:GLN269 A:TYR266 A:ARG321 A:ASN273 A:SER268 A:GLN249 A:GLY270
 Pocket 3: 16.8%
-GLU301 LYS298 MET313 ALA306 GLU369 GLN309 ARG302 ASN311 LYS305 PRO297
+A:ASN311 A:LYS298 A:GLU301 A:GLN309 A:PRO297 A:LYS305 A:ALA306 A:GLU369 A:MET313 A:ARG302
 ```
 
 ## License

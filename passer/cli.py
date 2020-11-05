@@ -12,6 +12,8 @@ def parse_args():
         help='PDB file')
     parser.add_argument('-c', '--chain', required=False, \
         help='chain ID')
+    parser.add_argument('-s', '--save', required=False, \
+        help='save FPocket results (y/n)')
     args = parser.parse_args()
     return args
 
@@ -21,7 +23,7 @@ def main(args):
         raise ValueError("One input is required!")
     if args.id and args.file:
         raise ValueError("Please specify only one input!")
-    model = Passer(args.id, args.file, args.chain)
+    model = Passer(args.id, args.file, args.chain, args.save)
     model.predict()
 
 

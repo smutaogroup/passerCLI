@@ -3,6 +3,10 @@
  passerCLI CHANGELOG
 ======================
 
+11/04/2020
+  * add chain ID in outputs.
+  * add option to save FPokket results.
+
 10/29/2020
   * v0.0.1 is published. 
 

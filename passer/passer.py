@@ -15,10 +15,11 @@ from pathlib import Path
 from passer import GCNN
 
 class Passer(object):
-    def __init__(self, pdbID, pdbFile, chain):
+    def __init__(self, pdbID, pdbFile, chain, save):
         self.PDBFILE = pdbFile
         # indicate whether user have input PDB file
         self.UPLOAD = False
+        self.save = True if save == "Y" or save == "y" else False
         self.PDB = pdbID
         self.pdbDIRECTION = "./"
         if self.PDBFILE:
@@ -73,8 +74,6 @@ class Passer(object):
     def __collectFPocket(self):
         self.features = self.__extractPocket()
         # add additional ranking features
-        for p in range(19):
-            self.features = self.__rank(self.features, index = p)
         self.features = np.array(self.features)
 
     def __graph(self, fileDirection, BOND_THRESHOLD = 10):
@@ -160,7 +159,7 @@ class Passer(object):
             for line in curFile:
                 if line[:4] == "ATOM":
                     info = line.split()
-                    curResidues.append(info[3] + info[5])
+                    curResidues.append(info[4] + ":" + info[3] + info[5])
             residues.append(" ".join(set(curResidues)))
         return residues
 
@@ -200,5 +199,6 @@ class Passer(object):
         # remove intermediate files
         if not self.UPLOAD:
             os.system("rm %s.pdb" %self.PDB)
-        os.system("rm -r %s%s_out" %(self.pdbDIRECTION, self.PDB))
+        if not self.save:
+            os.system("rm -r %s%s_out" %(self.pdbDIRECTION, self.PDB))
 
