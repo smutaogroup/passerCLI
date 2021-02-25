@@ -1,6 +1,7 @@
 # PASSer: Protein Allosteric Sites Server CLI
 
-[![Python 3.6+](https://img.shields.io/badge/python-3.6+-blue.svg)](https://www.python.org/downloads/release/python-360/) [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE) [![Code DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4154958.svg)](https://doi.org/10.5281/zenodo.4154958) [![Paper DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4154958.svg)](https://doi.org/10.1088/2632-2153/abe6d6)
+[![Python 3.6+](https://img.shields.io/badge/python-3.6+-blue.svg)](https://www.python.org/downloads/release/python-360/) [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE) [![Code DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4154958.svg)](https://doi.org/10.5281/zenodo.4154958) [![Paper DOI](https://zenodo.org/badge/DOI/10.1088/2632-2153/abe6d6.svg)](https://doi.org/10.1088/2632-2153/abe6d6)
+
 
 
 This is the command line interface (CLI) for [PASSer](https://passer.smu.edu). 
