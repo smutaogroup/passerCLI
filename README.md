@@ -6,7 +6,7 @@
 
 This is the command line interface (CLI) for [PASSer](https://passer.smu.edu). 
 
-If you find this helpful, please cite: Hao Tian et al 2021 Mach. Learn.: Sci. Technol. in press https://doi.org/10.1088/2632-2153/abe6d6 
+If you find this helpful, please cite: Hao Tian *et al* 2021 *Mach. Learn.: Sci. Technol.* **2** 035015
 
 ## Dependencies
 
